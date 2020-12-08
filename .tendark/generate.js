@@ -3,7 +3,7 @@ import Color from 'color'
 
 
 const SOURCE_THEME = 'themes/OneDark-Pro.json'
-const OUT_THEME = 'themes/TenDark.json'
+const OUT_THEME = '.tendark/themes/TenDark.json'
 const LIGHTEN_AMT = .05 // 5%
 const DARKEN_AMT = .05 // 5%
 const LUMINOSITY_THRESHOLD = .5 // the line drawn between classifying colors as dark or light
@@ -41,5 +41,6 @@ for(let old in newColors){
 newTheme = newTheme.replace(new RegExp('One', 'g'), 'Ten')
 newTheme = newTheme.replace(new RegExp('one', 'g'), 'ten')
 newTheme = newTheme.replace(' Pro', '')
+
 
 fs.writeFileSync(OUT_THEME, newTheme)

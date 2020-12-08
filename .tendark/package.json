@@ -1,0 +1,55 @@
+{
+    "name": "ten-dark",
+    "displayName": "Ten Dark",
+    "publisher": "mike",
+    "author": {
+        "name": "mike"
+    },
+    "description": "Inspired by Atom's One Dark",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "activationEvents": [
+        "*"
+    ],
+    "categories": [
+        "Themes"
+    ],
+    "extensionKind": [
+        "ui",
+        "workspace"
+    ],
+    "eslintConfig": {
+        "extends": [
+            "@mskelton",
+            "@mskelton/eslint-config/typescript"
+        ],
+        "plugins": [
+            "html"
+        ],
+        "rules": {
+            "sort/imports": "off"
+        }
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Ten Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/TenDark.json"
+            }
+        ]
+    },
+    "keywords": [
+        "ten dark",
+        "tendark",
+        "ten dark",
+        "theme",
+        "atom"
+    ],
+    "galleryBanner": {
+        "color": "#2d323b",
+        "theme": "dark"
+    }
+}
