@@ -1,16 +1,16 @@
 {
     "name": "material-theme",
-    "displayName": "One Dark Pro",
-    "description": "Atom's iconic One Dark theme for Visual Studio Code",
+    "displayName": "Ten Dark Pro",
+    "description": "Atom's iconic Ten Dark theme for Visual Studio Code",
     "version": "3.9.11",
     "publisher": "zhuangtongfa",
     "bugs": {
-        "url": "https://github.com/Binaryify/OneDark-Pro/issues"
+        "url": "https://github.com/Binaryify/TenDark-Pro/issues"
     },
-    "homepage": "https://binaryify.github.io/OneDark-Pro/",
+    "homepage": "https://binaryify.github.io/TenDark-Pro/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Binaryify/OneDark-Pro"
+        "url": "https://github.com/Binaryify/TenDark-Pro"
     },
     "engines": {
         "vscode": "^1.50.0"
@@ -48,7 +48,8 @@
         "watch:ts": "yarn build:ts -w",
         "vscode:prepublish": "yarn build",
         "package": "vsce package",
-        "build:sass": "yarn sass --no-source-map scss:styles && yarn sass --no-source-map scss:styles/origin"
+        "build:sass": "yarn sass --no-source-map scss:styles && yarn sass --no-source-map scss:styles/origin",
+        "generate-tendark": "node -r esm scripts/tendark/generate"
     },
     "prettier": {
         "singleQuote": true,
@@ -58,62 +59,62 @@
         "markdown.previewStyles": [
             "./styles/base-inside.css",
             "./styles/markdown-inside.css",
-            "./styles/atom-one-dark-inside.css"
+            "./styles/atom-ten-dark-inside.css"
         ],
         "commands": [
             {
-                "command": "oneDarkPro.showChangelog",
-                "title": "%description.oneDarkPro.showChangelog%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.showChangelog",
+                "title": "%description.tenDarkPro.showChangelog%",
+                "category": "TenDark Pro"
             },
             {
-                "command": "oneDarkPro.setVivid",
-                "title": "%description.oneDarkPro.setVivid%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.setVivid",
+                "title": "%description.tenDarkPro.setVivid%",
+                "category": "TenDark Pro"
             },
             {
-                "command": "oneDarkPro.cancelVivid",
-                "title": "%description.oneDarkPro.cancelVivid%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.cancelVivid",
+                "title": "%description.tenDarkPro.cancelVivid%",
+                "category": "TenDark Pro"
             },
             {
-                "command": "oneDarkPro.setItalic",
-                "title": "%description.oneDarkPro.setItalic%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.setItalic",
+                "title": "%description.tenDarkPro.setItalic%",
+                "category": "TenDark Pro"
             },
             {
-                "command": "oneDarkPro.cancelItalic",
-                "title": "%description.oneDarkPro.cancelItalic%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.cancelItalic",
+                "title": "%description.tenDarkPro.cancelItalic%",
+                "category": "TenDark Pro"
             },
             {
-                "command": "oneDarkPro.setBold",
-                "title": "%description.oneDarkPro.setBold%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.setBold",
+                "title": "%description.tenDarkPro.setBold%",
+                "category": "TenDark Pro"
             },
             {
-                "command": "oneDarkPro.cancelBold",
-                "title": "%description.oneDarkPro.cancelBold%",
-                "category": "OneDark Pro"
+                "command": "tenDarkPro.cancelBold",
+                "title": "%description.tenDarkPro.cancelBold%",
+                "category": "TenDark Pro"
             }
         ],
         "themes": [
             {
-                "label": "One Dark Pro",
+                "label": "Ten Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/OneDark-Pro.json"
+                "path": "./themes/TenDark.json"
             }
         ],
         "configuration": {
-            "title": "One Dark Pro",
+            "title": "Ten Dark Pro",
             "properties": {
-                "oneDarkPro.editorTheme": {
+                "tenDarkPro.editorTheme": {
                     "type": "string",
                     "default": "",
-                    "markdownDescription": "%description.oneDarkPro.editorTheme%",
+                    "markdownDescription": "%description.tenDarkPro.editorTheme%",
                     "enum": [
-                        "oneDarkPro",
-                        "oneDarkProFlat",
+                        "tenDarkPro",
+                        "tenDarkProFlat",
                         "nord",
                         "solarized",
                         "solarizedFlat",
@@ -123,34 +124,34 @@
                         "justBlack"
                     ]
                 },
-                "oneDarkPro.italic": {
+                "tenDarkPro.italic": {
                     "type": "boolean",
                     "default": true,
-                    "description": "%description.oneDarkPro.italic%"
+                    "description": "%description.tenDarkPro.italic%"
                 },
-                "oneDarkPro.vivid": {
+                "tenDarkPro.vivid": {
                     "type": "boolean",
                     "default": false,
-                    "markdownDescription": "%description.oneDarkPro.vivid%"
+                    "markdownDescription": "%description.tenDarkPro.vivid%"
                 },
-                "oneDarkPro.bold": {
+                "tenDarkPro.bold": {
                     "type": "boolean",
                     "default": false,
-                    "markdownDescription": "%description.oneDarkPro.bold%"
+                    "markdownDescription": "%description.tenDarkPro.bold%"
                 },
-                "oneDarkPro.markdownStyle": {
+                "tenDarkPro.markdownStyle": {
                     "type": "boolean",
                     "default": true,
-                    "description": "%description.oneDarkPro.markdownStyle%"
+                    "description": "%description.tenDarkPro.markdownStyle%"
                 }
             }
         }
     },
     "icon": "icon.png",
     "keywords": [
-        "one dark",
-        "onedark",
-        "one dark pro",
+        "ten dark",
+        "tendark",
+        "ten dark pro",
         "theme",
         "atom"
     ],
@@ -178,6 +179,8 @@
         "theme": "dark"
     },
     "dependencies": {
+        "color": "^3.1.3",
+        "esm": "^3.2.25",
         "marked": "^1.0.0"
     }
 }
